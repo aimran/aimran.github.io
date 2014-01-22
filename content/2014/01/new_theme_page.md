@@ -4,7 +4,7 @@ tag: blog
 category: blog
 summary:  Announcing new blog page and theme
 
-Over the weekend, I attempted to resurrect my old website. The whole exercise
+Over the weekend, I attempted to resurrect my old website/blog. The whole exercise
 reminded me why I stopped around the last time, namely, the sheer tedium of
 tweaking css/html to get things just right.
 
