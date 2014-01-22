@@ -2,8 +2,8 @@ Asif Imran's Personal Website
 * Author: Asif Imran
 * License: BSD 3-clause
 
-* How to publish to github user page from scratch
-``
+###How to publish to github user page from scratch
+```
 (master) git init
 (master) git checkout -b source
 (source) git add .
