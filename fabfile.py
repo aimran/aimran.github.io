@@ -72,6 +72,8 @@ def git_commit_all(msg):
     local("git add .")
     local("git commit -m \"{0}\"".format(msg))
 
+def test():
+    print ABS_OUTPUT_PATH
 
 def publish():
     """Generates and publish the new site in github pages"""
@@ -86,7 +88,7 @@ def publish():
     git_change_branch(source_branch)
 
     # Generate the html
-    generate(ABS_ROOT_DIR)
+    generate(ABS_OUTPUT_PATH)
 
     #push source/output to github
     git_commit_all("Publication {0}".format(now))
