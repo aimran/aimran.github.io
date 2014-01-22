@@ -10,6 +10,7 @@ AVATAR = '/theme/images/selfie.png'
 TITLE = 'Asif Imran: Dreaming in Data'
 
 PATH = 'content'
+OUTPUT_PATH = 'output'
 
 THEME = '../moonlake'
 SUMMARY_MAX_LENGTH = 50

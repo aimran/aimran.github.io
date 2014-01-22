@@ -1,60 +1,105 @@
-from fabric.api import *
-import fabric.contrib.project as project
 import os
+import time
 
-# Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = 'output'
-DEPLOY_PATH = env.deploy_path
+from fabric.api import local, lcd, settings
+from fabric.utils import puts
 
-# Remote server configuration
-production = 'root@localhost:22'
-dest_path = '/var/www'
-
-# Rackspace Cloud Files configuration settings
-env.cloudfiles_username = 'my_rackspace_username'
-env.cloudfiles_api_key = 'my_rackspace_api_key'
-env.cloudfiles_container = 'my_cloudfiles_container'
+#If no local_settings.py then settings.py
+try:
+    from pelicanconf import OUTPUT_PATH
+    SETTINGS_FILE = "pelicanconf.py"
+except ImportError, detail:
+    print detail
+    pass
 
 
-def clean():
-    if os.path.isdir(DEPLOY_PATH):
-        local('rm -rf {deploy_path}'.format(**env))
-        local('mkdir {deploy_path}'.format(**env))
+# Get directories
+ABS_ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+ABS_SETTINGS_FILE = os.path.join(ABS_ROOT_DIR, SETTINGS_FILE)
+ABS_OUTPUT_PATH = os.path.join(ABS_ROOT_DIR, OUTPUT_PATH)
 
-def build():
-    local('pelican -s pelicanconf.py')
 
-def rebuild():
-    clean()
-    build()
+# Commands
+def generate(output=None):
+    """Generates the pelican static site"""
 
-def regenerate():
-    local('pelican -r -s pelicanconf.py')
+    if not output:
+        cmd = "pelican -s {0}".format(ABS_SETTINGS_FILE)
+    else:
+        cmd = "pelican -s {0} -o {1}".format(ABS_SETTINGS_FILE, output)
+
+    local(cmd)
+
+
+def destroy(output=None):
+    """Destroys the pelican static site"""
+
+    if not output:
+        cmd = "rm -r {0}".format(os.path.join(ABS_ROOT_DIR, OUTPUT_PATH))
+    else:
+        cmd = "rm -r {0}".format(output)
+
+    with settings(warn_only=True):
+        result = local(cmd)
+    if result.failed:
+        puts("Already deleted")
+
 
 def serve():
-    local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))
+    """Serves the site in the development webserver"""
+    print(ABS_OUTPUT_PATH)
+    with lcd(ABS_OUTPUT_PATH):
+        local("python -m SimpleHTTPServer")
 
-def reserve():
-    build()
-    serve()
 
-def preview():
-    local('pelican -s publishconf.py')
+def git_change_branch(branch):
+    """Changes from one branch to other in a git repo"""
+    local("git checkout {0}".format(branch))
 
-def cf_upload():
-    rebuild()
-    local('cd {deploy_path} && '
-          'swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-          '-U {cloudfiles_username} '
-          '-K {cloudfiles_api_key} '
-          'upload -c {cloudfiles_container} .'.format(**env))
 
-@hosts(production)
+def git_merge_branch(branch):
+    """Merges a branch in other branch"""
+    local("git merge {0}".format(branch))
+
+
+def git_push(remote, branch):
+    """Pushes the git changes to git remote repo"""
+    local("git push {0} {1}".format(remote, branch))
+
+
+def git_commit_all(msg):
+    """Commits all the changes"""
+    local("git add .")
+    local("git commit -m \"{0}\"".format(msg))
+
+
 def publish():
-    local('pelican -s publishconf.py')
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True
-    )
+    """Generates and publish the new site in github pages"""
+    source_branch = "source"
+    publish_branch = "master"
+    remote = "origin"
+
+    # Commit changes
+    now = time.strftime("%d %b %Y %H:%M:%S", time.localtime())
+
+    # Change to gh-pages branch
+    git_change_branch(source_branch)
+
+    # Generate the html
+    generate(ABS_ROOT_DIR)
+
+    #push source/output to github
+    git_commit_all("Publication {0}".format(now))
+    git_push(remote, source_branch)
+
+    #change to master branch
+    git_change_branch(publish_branch)
+
+    #do a subtree merge
+    local("git pull --no-edit -s subtree origin source")
+
+    # Push master/output to github
+    git_push(remote, publish_branch)
+
+    # go to master
+    git_change_branch(source_branch)
