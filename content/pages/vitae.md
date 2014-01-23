@@ -3,7 +3,8 @@ URL:
 save_as: vitae.html
 
 #### 1. Curriculum vitae  
-Professional CV in **[pdf]({filename}/pdfs/resume.pdf)**
+Professional **[CV]({filename}/pdfs/curr_vitae.pdf)** and
+**[resume]({filename}/pdfs/resume.pdf)**.
 
 ----
 
