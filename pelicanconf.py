@@ -52,7 +52,7 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
           ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('Github', 'http://github.com/asif-imran', 'fa-github'),
+SOCIAL = (('Github', 'http://github.com/aimran', 'fa-github'),
         ('Twitter', 'http://twitter.com/5sigma', 'fa-twitter'),
         ('LinkedIn', 'http://www.linkedin.com/pub/asif-imran/60/523/6a1',
             'fa-linkedin'))
