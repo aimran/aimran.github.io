@@ -24,11 +24,12 @@ At present, I am a research associate at the [Wisconsin IceCube Particle
 Astrophysics Center](www.wipac.wisc.edu) (WIPAC). I am taking part in the
 construction  and operation of the High Altitude Water Cherenkov (HAWC)
 observatory in Mexico as part of a multinational collaboration of scientists.
-At HAWC, I am leading the effort to observe and understand gamma ray emission
-from active galaxies. I am also developing software analysis tools to conduct searches for
-extremely bright but short transient events in the gamma-ray sky observed by
-HAWC. I make extensive use of image analysis, constrained optimization
-techniques, and Bayesian probability theory for my research.
+At HAWC, I am leading the effort to observe and understand flaring gamma ray
+emission from active galaxies. I am also developing software analysis tools to
+conduct searches for extremely bright but short transient events in the
+gamma-ray sky observed by HAWC. I make extensive use of image analysis,
+constrained optimization techniques, and Bayesian probability theory for my
+research.
 
 Prior to WIPAC, I was a postdoctoral researcher at the [Los Alamos National
 Laboratory](lanl.gov) (LANL) in New Mexico. During my time at LANL, I designed
