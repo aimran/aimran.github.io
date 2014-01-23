@@ -22,6 +22,6 @@ Asif Imran's Personal Website
 ```
 (source) pelican content -o output -s pelicanconf.py
 (source) git checkout master
-(master) git pull -s subtree origin source
+(master) git pull --no-edit -s subtree origin source
 ```
 
