@@ -27,7 +27,7 @@ observatory in Mexico as part of a multinational collaboration of scientists.
 At HAWC, I am leading the effort to observe and understand flaring gamma ray
 emission from active galaxies. I am also developing software analysis tools to
 conduct searches for extremely bright but short transient events in the
-gamma-ray sky observed by HAWC. I apply {\it cutting-edge} imaging techniques
+gamma-ray sky observed by HAWC. I apply *cutting-edge* imaging techniques
 and statistical tools¬to analyze large quantities of data to study
 high-energy photon¬ emissions from distant galaxies.
 
