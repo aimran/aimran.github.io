@@ -21,7 +21,9 @@ Asif Imran's Personal Website
 ####To do regular update using the output tree
 ```
 (source) pelican content -o output -s pelicanconf.py
+(source) git push --all
 (source) git checkout master
 (master) git pull --no-edit -s subtree origin source
+(master) git push origin master
 ```
 
