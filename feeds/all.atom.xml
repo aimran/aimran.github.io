@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Asif Imran</title><link href="http://aimran.github.io/" rel="alternate"></link><link href="http://aimran.github.io/feeds/all.atom.xml" rel="self"></link><id>http://aimran.github.io/</id><updated>2014-01-22T00:18:00-06:00</updated><entry><title>New Theme For the Blog</title><link href="http://aimran.github.io/blog/2014/01/22/new-theme-for-the-blog" rel="alternate"></link><updated>2014-01-22T00:18:00-06:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-22:blog/2014/01/22/new-theme-for-the-blog</id><summary type="html">&lt;p&gt;Over the weekend, I attempted to resurrect my old website/blog. The whole exercise
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Asif Imran</title><link href="http://aimran.github.io/" rel="alternate"></link><link href="http://aimran.github.io/feeds/all.atom.xml" rel="self"></link><id>http://aimran.github.io/</id><updated>2014-01-22T00:18:00-08:00</updated><entry><title>New Theme For the Blog</title><link href="http://aimran.github.io/blog/2014/01/22/new-theme-for-the-blog" rel="alternate"></link><updated>2014-01-22T00:18:00-08:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-22:blog/2014/01/22/new-theme-for-the-blog</id><summary type="html">&lt;p&gt;Over the weekend, I attempted to resurrect my old website/blog. The whole exercise
 reminded me why I stopped around the last time, namely, the sheer tedium of
 tweaking css/html to get things just right.&lt;/p&gt;
 &lt;p&gt;Luckily, this time around I discovered &lt;a href="http://getpelican.com"&gt;pelican&lt;/a&gt;, a
@@ -15,28 +15,53 @@ liquid images.&lt;/p&gt;
 &lt;p&gt;Next, I took the &lt;em&gt;simply&lt;/em&gt; theme from &lt;a href="gjreda.com"&gt;Greg Reda&lt;/a&gt;. I really liked the
 responsive theme. But at the end, I ended up completely gutting the design and
 going with my own. So much so that I now have the moonlake theme for pelican. 
-Its on my github repo.  Feel free to use it as you see fit. &lt;/p&gt;</summary></entry><entry><title>Plot Fermi 2nd AGN Catalog Data</title><link href="http://aimran.github.io/blog/2014/01/21/plot-fermi-2nd-agn-catalog-data" rel="alternate"></link><updated>2014-01-21T19:30:00-06:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-21:blog/2014/01/21/plot-fermi-2nd-agn-catalog-data</id><summary type="html">&lt;p&gt;
+Its on my github repo.  Feel free to use it as you see fit. &lt;/p&gt;</summary></entry><entry><title>Plot Fermi 2nd AGN Catalog Data</title><link href="http://aimran.github.io/blog/2014/01/21/plot-fermi-2nd-agn-catalog-data" rel="alternate"></link><updated>2014-01-21T19:30:00-08:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-21:blog/2014/01/21/plot-fermi-2nd-agn-catalog-data</id><summary type="html">&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="recreate-fermi-2lac-plots"&gt;Recreate Fermi 2LAC Plots&lt;/h1&gt;
 &lt;h4 id="aimranicecube.wisc.edu"&gt;aimran@icecube.wisc.edu&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In the previous post, I showed how to scrape the Fermi 2LAC catalog starting with a csv file and how to convert it into a fits file. Today, I will demonstrate how to actually make use of the fits file. We will be making heavy use of the fits package from astropy. It would be a good idea to review the docs page in case you get stuck with the nomenclature.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Create-a-fits-file-parser"&gt;Create a fits file parser&lt;a class="anchor-link" href="#Create-a-fits-file-parser"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We will create a small parser to quickly and efficiently read the fits file. It would be extremely tedious to have to open fits file, define tables, columns etc. Remember! If you are typing up the same thing over and over again, there is probably a better way to do things.&lt;/p&gt;
 &lt;p&gt;With that in mind, lets look at parts of FLACatalog.py (available at my github repo). We'll only focus on the important bits -- Its essentially a class that encapsulates the opening of the fits file and defines a bunch of handy getters to extract the info from relevant columns.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FLACatalog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="sd"&gt;    Parse the FLAC fits file and extract data from the main table.&lt;/span&gt;
@@ -92,24 +117,38 @@ In&amp;nbsp;[]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Lets deconstruct the class FLACatalog. It accepts a filename as an argument that should correspond to the fits file we created earlier. The &lt;code&gt;pyfits.open&lt;/code&gt; function opens the file and returns a list of header/data units (hdulist). Our main table is stored as the second element &lt;code&gt;hdulist[1]&lt;/code&gt; [first one corresponds to the main header of the file]. Afterwards, we associate different class variables to all the table columns in the fits file using the &lt;code&gt;field&lt;/code&gt; method. And we are almost done!&lt;/p&gt;
 &lt;p&gt;All there is left to do is to set some convenient getters to grab the columns from the catalog on demand. For brevity, I'm only showing the &lt;code&gt;ra&lt;/code&gt; method but hopefully you get the picture.&lt;/p&gt;
 &lt;p&gt;One word of caution. There are units built into several of the fields in the catalog. Therefore, I've tried my best to take care of them in the FLACatalog. You are encouraged to check/verify for yourself.&lt;/p&gt;
 &lt;p&gt;Now we are going to move on to making use of our new found power. What better way to do it than by re-creating some of the plots that came in the original &lt;a href="http://adsabs.harvard.edu/abs/2011ApJ...743..171A"&gt;ApJ paper&lt;/a&gt; accompanying the catalog. I will only attempt a few of the plots. The reader is encouraged to try and fill in the rest. Happy coding!&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Generate-Plots"&gt;Generate Plots&lt;a class="anchor-link" href="#Generate-Plots"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
@@ -120,38 +159,60 @@ In&amp;nbsp;[1]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We instantiate an FLACatalog object by passing in the location of the fits file we created previously.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;catFLA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FLACatalog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;../data/fermi_2lac_v01.fits&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-2"&gt;Figure 2&lt;a class="anchor-link" href="#Figure-2"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We will begin by re-making figure 2 in the paper above. It shows the 95% containment radius as a function of TS (or the test statistic). The plot is further divided up into different population of AGN, namely, FSRQ, BL Lacs, unknown type, and other AGN.&lt;/p&gt;
 &lt;p&gt;The first thing to do is to create a mask corresponding to the clean flag as set by the Fermi team. This is&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#catalog name&lt;/span&gt;
 &lt;span class="n"&gt;catName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catFLA&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;catalog_name&lt;/span&gt;
 
@@ -178,17 +239,25 @@ In&amp;nbsp;[3]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Let the plotting fiesta begin! Please note that your plot may look slightly different from mine since I use a few custom style settings.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;scatter_kwargs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;linewidths&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;edgecolors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -211,15 +280,16 @@ In&amp;nbsp;[4]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABEYAAAM/CAYAAADcMteSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3XmcjXX/x/HXGWN2+zrGOghlqSGyzyC7bqVkJ0QKle62
 X9lK3W2qWyVkr0SWuIVB9iiEIhmyDENjH4xl9uv3xzHHHHPO7DNnzpz3s8d5PK7re77X9/s548rl
@@ -2239,28 +2309,44 @@ AgAAAAAAXItgBAAAAAAAuBbBCAAAAAAAcC2CEQAAAAAA4FoEIwAAAAAAwLUIRgAAAAAAgGsRjAAA
 AAAAANciGAEAANqAWyMAAABUSURBVAAAAK5FMAIAAAAAAFyLYAQAAAAAALgWwQgAAAAAAHAtghEA
 AAAAAOBaBCMAAAAAAMC1CEYAAAAAAIBrEYwAAAAAAADXIhgBAAAAAACu9f8AnHPNoTbv/yEAAAAA
 SUVORK5CYII=
-"&gt;
+"
+width=547
+height=415
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-6"&gt;Figure 6&lt;a class="anchor-link" href="#Figure-6"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Not bad! This looks very close to what you have on the paper. So, we are off to a good start. Lets plow on. We'll try figure 6 next. Its a plot of the distribution of log of synchrotron peak for 2 different species of AGN (FSRQ and BL Lac). Note that we are reusing mask from the previous along with a new clean mask as specified by the Fermi team.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#clean flag&lt;/span&gt;
 &lt;span class="n"&gt;cleanFlg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catFLA&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clean_flag&lt;/span&gt;
 
@@ -2273,14 +2359,16 @@ In&amp;nbsp;[5]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[6]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;minorLocator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MultipleLocator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -2298,15 +2386,16 @@ In&amp;nbsp;[6]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBAAAANCCAYAAADfhD+CAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3XlcVdX+//H3AUTECcUBJDBniXDOIhUtFdPUvHlTybHk
 apl5v82jldW1ruXNa9pgamqmYmlZqIRKoTnllDOgJQIiivNAzOf3hz/25cRwDsMBjNfz8eDxWJu9
@@ -3137,28 +3226,44 @@ Dz/8UM2aNdP8+fPtjgYAAIqASRQBAAAAAIAlrkAAAAAAAACWKBAAAAAAAIAlCgQAAAAAAGCJAgEA
 AAAAAFiiQAAAAAAAAJYoEAAAAAAAgCUKBAAAAAAAYIkCAQAAAAAAWKJAAAAAAAAAligQAAAAAACA
 JQoEAAAAAABgiQIBAAAAAABYokAAAAAAAACWKBAAAAAAAIAlCgQAAAAAAGCJAgEAAAAAAFj6/6kH
 OwTzX5TTAAAAAElFTkSuQmCC
-"&gt;
+"
+width=520
+height=417
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-7"&gt;Figure 7&lt;a class="anchor-link" href="#Figure-7"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Once again its pretty close! In the next couple of panels, I will blast through some more plots. It should all be fairly straight-forward from here on. The basic idea is to use numpy's powerful array masking feature to select multiple species of AGN along with variable of interest.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;cblac&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blacFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;aoxb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catFLA&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;aox&lt;/span&gt;
 &lt;span class="n"&gt;arob&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catFLA&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;aro&lt;/span&gt;
@@ -3182,15 +3287,16 @@ In&amp;nbsp;[7]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABEgAAAM2CAYAAADl9LbpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3Xd4FOX6//HPhkAKCRBaQgoEEDAYQALSpaMUUaSJVAUE
 FeEgoOeroogo5wgi53jEgghIEUVEigHFAkYPSFeaFCGB0CEEEkL67u8PfuxhTd1kN7vZfb+uy+ua
@@ -4362,25 +4468,35 @@ AOCjCEgAAABc5JdfftHOnTt19uxZlSlTRrfffrs6deqUIxgBAADeh4AEAAAAAADYHmuQAAAAAAAA
 2yMgAQAAAAAAtkdAAgAAAAAAbI+ABAAAAAAA2B4BCQAAAAAAsD0CEgAAAAAAYHsEJAAAAAAAwPYI
 SAAAAAAAgO0RkAAAAAAAANsjIAEAAAAAALZHQAIAAAAAAGyPgAQAAAAAANgeAQkAAAAAALA9AhIA
 AAAAAGB7BCQAAAAAAMD2CEgAAAAAAIDt/X8eRdNXUn0xygAAAABJRU5ErkJggg==
-"&gt;
+"
+width=548
+height=411
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-8"&gt;Figure 8&lt;a class="anchor-link" href="#Figure-8"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[8]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;lg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log10&lt;/span&gt;
 &lt;span class="n"&gt;cfsrq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fsrqFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -4409,15 +4525,16 @@ In&amp;nbsp;[8]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDwAAAM9CAYAAABwkWPIAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3Xd4VFX+x/HPhEASagKht4QiPVSpKxAEpKmIgvSmRKS4
 oKD+lppF2TWIChbKCgpiQASkI01IQBApKlVCCwFECJBAIBCSzPz+YDPLmDrJlGR4v54nj/fce+45
@@ -6133,28 +6250,44 @@ RERERERE9J/EGR5EREREREREpHWY8CAiIiIiIiIircOEBxERERERERFpHSY8iIiIiIiIiEjrMOFB
 RERERERERFqHCQ8iIiIiIiIi0jpMeBARERERERGR1mHCg4iIiIiIiIi0DhMeRERERERERKR1mPAg
 IiIiIiIiIq3DhAcRERERERERaR0mPIiIiIiIiIhI6zDhQURERERERERahwkPIiIiIiIiItI6THgQ
 ERERERERkdZhwoOIiIiIiIiItM7/ANpbPImgoiALAAAAAElFTkSuQmCC
-"&gt;
+"
+width=542
+height=414
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-10"&gt;Figure 10&lt;a class="anchor-link" href="#Figure-10"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This plot shows a normalized distribution of number of sources as a function of galactic latitude. Note I use the &lt;code&gt;weights&lt;/code&gt; argument to specify the normalization factor.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[9]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;cfsrq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fsrqFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;cblac&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blacFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;cunkwn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;agnFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -6187,15 +6320,16 @@ In&amp;nbsp;[9]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAARrCAYAAADvkoG/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3XlclPX+///nIOLG4o6KmFhaGZiaaYpSGZVKLmnuFiaK
 x6P5yTqd6hyXTOp8PnU8mqWm4nbU1DRyCSvNTCx3zZA86skk0UARxYVNYOb3h1+vHyjLMGAz4zzu
@@ -7887,28 +8021,44 @@ p2vHjh1VmqdLly567bXXNGTIkCrNAwAASkchBwAAAAAAwEnwaBUAAAAAAICToJADAAAAAADgJCjk
 AAAAAAAAOAkKOQAAAAAAAE6CQg4AAAAAAICToJADAAAAAADgJCjkAAAAAAAAOAkKOQAAAAAAAE6C
 Qg4AAAAAAICToJADAAAAAADgJCjkAAAAAAAAOAkKOQAAAAAAAE6CQg4AAAAAAICToJADAAAAAADg
 JCjkAAAAAAAAOIn/B4NmW49sZXzuAAAAAElFTkSuQmCC
-"&gt;
+"
+width=569
+height=565
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Figure-12"&gt;Figure 12&lt;a class="anchor-link" href="#Figure-12"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Okay, this is the last plot, I promise! I'll leave a few for you to figure out. This plot shows the number distribution of AGN as a function of redshift.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[10]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;cfsrq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fsrqFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;cblac&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logical_and&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleanFlg&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blacFlg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -7950,15 +8100,16 @@ In&amp;nbsp;[10]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAARvCAYAAAB0A8OpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAWJQAAFiUBSVIk8AAAIABJREFUeJzs3XtclWW6//HPQgRPgOIBUDFRdMpBSzIdwU4OTSp5SPNQ
 WJCS5tiwc2r2ngrTttTsX3sc01LLQ2GCh50xgmEHU9MKzzoiWVoqhQVKKh44I+v3B5tnL3Qt1mKp
@@ -9821,33 +9972,55 @@ AAAXwWLHAAAAAAAALoJCDgAAAAAAgIugkAMAAAAAAOAiKOQAAAAAAAC4CAo5AAAAAAAALoJCDgAA
 AAAAgIugkAMAAAAAAOAiKOQAAAAAAAC4CAo5AAAAAAAALoJCDgAAAAAAgIugkAMAAAAAAOAiKOQA
 AAAAAAC4CAo5AAAAAAAALoJCDgAAAAAAgIugkAMAAAAAAOAiKOQAAAAAAAC4CAo5AAAAAAAALoJC
 DgAAAAAAgIv4P9tA2rTkzoDtAAAAAElFTkSuQmCC
-"&gt;
+"
+width=569
+height=567
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Whew! That was a lot of fun. I hope this notebook shows you how easy it is to grab data from the web and start getting plotting. However, the use of IPython notebook kicks it up a notch. Code, plot and documentation-- all in one page.&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Convert 2LAC catalog to a fits file</title><link href="http://aimran.github.io/blog/2014/01/20/convert-2lac-catalog-to-a-fits-file" rel="alternate"></link><updated>2014-01-20T19:30:00-06:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-20:blog/2014/01/20/convert-2lac-catalog-to-a-fits-file</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Convert 2LAC catalog to a fits file</title><link href="http://aimran.github.io/blog/2014/01/20/convert-2lac-catalog-to-a-fits-file" rel="alternate"></link><updated>2014-01-20T19:30:00-08:00</updated><author><name>Asif Imran</name></author><id>tag:aimran.github.io,2014-01-20:blog/2014/01/20/convert-2lac-catalog-to-a-fits-file</id><summary type="html">&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="generating-fits-version-of-2lac-catalog"&gt;Generating fits version of 2LAC Catalog&lt;/h1&gt;
 &lt;h4 id="asif-imran-aimranicecube.wisc.edu"&gt;Asif Imran (aimran@icecube.wisc.edu)&lt;/h4&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The Fermi Large Area Telescope recently released a &lt;a href="http://adsabs.harvard.edu/abs/2011ApJ...743..171A"&gt;catalog&lt;/a&gt; of active galacic nuclei (AGN) based on last 2 years of scientific operation. Obviously, for anyone studying the extra-galactic sky in gamma rays, the 2nd year AGN catalog (2LAC) is a treasure field. Fermi released a number of their previous catalogs in the convenient FITS format. However, the 2LAC somehow did not make the list.&lt;/p&gt;
 &lt;p&gt;Fortunately for us, the ASI Science Data Center (ASDC), a facility of the Italian Space agency (ASI) maintains a very helpful &lt;a href="http://www.asdc.asi.it/fermi2lac/"&gt;online version of several Fermi catalogs&lt;/a&gt;, incuding 2LAC. Moreover, they allow you to download the entire catalog in csv format! I figured its worth an afternoon's work to convert the csv file into one in FITS format.&lt;/p&gt;
 &lt;p&gt;I went ahead and selected all fields and all entries using the web-form and downloaded a csv file. As it turns out, the csv database is a tad dirty. Therefore, a good part of my little afternoon hack was spent trying to clean up the mess. I'm documenting my work in hopes that it may be useful for some. In a latter notebook, I will show how to conveniently parse the resulting FITS file.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;astropy.io&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;fits&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pyfits&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;StringIO&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;StringIO&lt;/span&gt;
@@ -9856,21 +10029,35 @@ In&amp;nbsp;[1]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Cleaning-up-the-Column-Names-and-Data-Types"&gt;Cleaning up the Column Names and Data Types&lt;a class="anchor-link" href="#Cleaning-up-the-Column-Names-and-Data-Types"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;It turns out that some of the column names had traling empty spaces in them. In addition, there are quite a few null values. As a result, &lt;code&gt;numpy&lt;/code&gt; fails to reliably determine the data types for several columns. I went through the csv header and decided to hard-wire all the column names along with the data types. I will come back later to fix the null entries.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;conv_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Fermi_Name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;|S17&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;CName&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;|S22&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
              &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;RAJ2000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;float32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;DEJ2000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;float32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;GLON&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;float32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;GLAT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;float32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
@@ -9893,17 +10080,25 @@ In&amp;nbsp;[2]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Here are a some handy converters that we can feed into numpy's fabulous &lt;code&gt;genfromtxt&lt;/code&gt; routine. It has tons of knobs (compared to, say, the simple loadtxt) that you can use to really fine tune your data munging.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Fairly obvious what these does... turns &amp;#39;-&amp;#39; &lt;/span&gt;
 &lt;span class="c"&gt;# into reasonable values&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;convertToFloat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -9931,17 +10126,25 @@ In&amp;nbsp;[3]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Open the csv file. I saved it as 'fermi2LAC_raw_data.csv'. I then use &lt;code&gt;genfromtxt&lt;/code&gt; to convert it to a numpy array. Note that the use of dtype now allows me to refer to the columns by names (as specified by the keys in conv_type). Also, I really like the use of converters to deal with null entries at the time of reading the file (a great example of functional programming, IMO). Finally, we have a &lt;a href="http://docs.scipy.org/doc/numpy/user/basics.rec.html#module-numpy.doc.structured_arrays"&gt;structured array&lt;/a&gt;, conveniently named &lt;code&gt;data&lt;/code&gt; that corresponds to all the entries read from the csv files.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;fil&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;../data/fermi2LAC_raw_data.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;my_converters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;fixClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -9964,17 +10167,25 @@ In&amp;nbsp;[4]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;A quick sanity check (not meant to be complete) to see if we have any unreasonable data (e.g., stray characters, quotes etc.) still lurking in the data array.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;checkValid&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;float32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;N/A&amp;#39;&lt;/span&gt;
     &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -9989,23 +10200,37 @@ In&amp;nbsp;[5]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Creating-FITS-File"&gt;Creating FITS File&lt;a class="anchor-link" href="#Creating-FITS-File"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;At this point, we are in a reasonable shape to try and attempt to create the FITS file. &lt;a href="http://fits.gsfc.nasa.gov"&gt;FITS&lt;/a&gt; is an open standard, digital file format used throughout the astronomy community. It's heavily used by astronomers for the purposes of storing large images/data sets, transferring data over the wire and performing routine analysis. I will avoid delving into the details of actual FITS standards but the reader may find it useful to carefully go over them.&lt;/p&gt;
 &lt;p&gt;Fortunately for us pythonistas', there is a great package called &lt;a href="https://pyfits.readthedocs.org/en/v3.2.0/"&gt;pyfits&lt;/a&gt; that makes generating FITS files and dealing with them almost a breeze. Although &lt;code&gt;pyfits&lt;/code&gt; is marked to be &lt;a href="http://pythonhosted.org/pyfits/developers_guide/developers_guide.html"&gt;deprecated&lt;/a&gt; in the near future, it has found a new home with the great &lt;a href="http://www.astropy.org"&gt;astropy&lt;/a&gt; community. The goal is to eventually provide a drop-in replacement for the original&lt;code&gt;pyfits&lt;/code&gt; within astropy.&lt;/p&gt;
 &lt;p&gt;In order to build the FITS table from our data, we need to provide the unit, a short description and a data type for each of the field to be stored in FITS format. One can concievably skip this step all together but then the resulting FITS file may become incomprehensible as time passes (&lt;em&gt;&amp;quot;Was RA in degrees or radians??&amp;quot;&lt;/em&gt;). So, I decided to fill in the details to the best of my abilities. There is of course a convenient table of description for each of the fields in the original paper accompanying the 2LAC release-- I cut and pasted as appropriate.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[6]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#Dictionary of units for each field&lt;/span&gt;
 &lt;span class="n"&gt;unitmap&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(((&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Fermi_Name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;CName&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;RAJ2000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;deg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;DEJ2000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;deg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
@@ -10090,17 +10315,25 @@ In&amp;nbsp;[6]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Create an array of pyfits.columns that will shortly be written into the FITS file&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="c"&gt;#create a pyfit.column for each of the column in our data array&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -10114,13 +10347,14 @@ In&amp;nbsp;[7]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 [name = &amp;apos;Fermi_Name&amp;apos;; format = &amp;apos;A17&amp;apos;; disp = &amp;apos;A17&amp;apos;, name = &amp;apos;CName&amp;apos;; format = &amp;apos;A22&amp;apos;; disp = &amp;apos;A22&amp;apos;, name = &amp;apos;RAJ2000&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;DEJ2000&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;GLON&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;GLAT&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;AngSep&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;PosErr95deg&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;deg&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;Class&amp;apos;; format = &amp;apos;A16&amp;apos;; disp = &amp;apos;A16&amp;apos;, name = &amp;apos;Redshift&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;SED_Type&amp;apos;; format = &amp;apos;A3&amp;apos;; disp = &amp;apos;A3&amp;apos;, name = &amp;apos;BayProb&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;LR_RGProb&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;LR_XGProb&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;LogNLogSProb&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;LR_RG&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;LR_XG&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;Flux1000_100000&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;photon/cm2/s&amp;apos;; disp = &amp;apos;E10.4&amp;apos;, name = &amp;apos;Unc_Flux1000_100000&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;photon/cm2/s&amp;apos;; disp = &amp;apos;E10.4&amp;apos;, name = &amp;apos;Spectral_Index&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;Unc_Spectral_Index&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.4&amp;apos;, name = &amp;apos;TS&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;Radio_Flux&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;mJy&amp;apos;; disp = &amp;apos;F10.4&amp;apos;, name = &amp;apos;Xray_Flux&amp;apos;; format = &amp;apos;E4&amp;apos;; unit = &amp;apos;erg/cm2/s&amp;apos;; disp = &amp;apos;E10.4&amp;apos;, name = &amp;apos;USNOVmag&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;SDSSVmag&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;ARO&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;AOX&amp;apos;; format = &amp;apos;E4&amp;apos;; disp = &amp;apos;F8.3&amp;apos;, name = &amp;apos;CLEAN&amp;apos;; format = &amp;apos;I4&amp;apos;, name = &amp;apos;IN_2FGL&amp;apos;; format = &amp;apos;I4&amp;apos;]
 
@@ -10132,15 +10366,22 @@ In&amp;nbsp;[7]:
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;At long last, we are ready to write the file. The actual python command for it is very terse indeed.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[9]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Create primary header/data unit (mandatory for every file)&lt;/span&gt;
 &lt;span class="n"&gt;hdu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyfits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PrimaryHDU&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -10184,32 +10425,41 @@ In&amp;nbsp;[9]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Yay! At this point, we have a brand-new FITS file that will hopefully be useful to our analysis. Lets take it out for a spin, shall we? Peek into the file you just created using &lt;code&gt;pyfits.getheader&lt;/code&gt; function. This pretty-prints the header we wrote not too long ago. Let check and make sure that everything looks okay.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[10]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;pyfits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getheader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;fermi_2lac_v01.fits&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
     Out[10]:&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
 
+&lt;div class="output_text output_subarea output_pyout"&gt;
 &lt;pre&gt;
 XTENSION= &amp;apos;BINTABLE&amp;apos;           / binary table extension                         
 BITPIX  =                    8 / array data type                                
@@ -10326,18 +10576,30 @@ TFORM29 = &amp;apos;I       &amp;apos;
 TTYPE30 = &amp;apos;IN_2FGL &amp;apos;           / Flag for a source in the 2FGL List             
 TFORM30 = &amp;apos;I       &amp;apos;                                                            
 &lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Analyzing-the-FITS-file"&gt;Analyzing the FITS file&lt;a class="anchor-link" href="#Analyzing-the-FITS-file"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In the next day or two, I hope to post more information on how to actually use the FITS file in your analysis. Stay tuned!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry></feed>
