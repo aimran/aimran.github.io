@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Asif Imran'
 SITENAME = u'Asif Imran'
 SITEURL = 'http://aimran.github.io'
-TIMEZONE = 'America/Chicago'
+TIMEZONE = 'America/Los_Angeles'
 AVATAR = '/theme/images/selfie.png'
 TITLE = 'Asif Imran: Dreaming in Data'
 
@@ -28,13 +28,14 @@ TAG_URL = 'tag/{slug}'
 TAG_SAVE_AS = 'tag/{slug}.html'
 
 DIRECT_TEMPLATES = ('blog', 'archives', 'tags')
-PAGINATED_DIRECT_TEMPLATES = (('blog'))
+PAGINATED_DIRECT_TEMPLATES = ('blog',)
 
 CODE_DIR = 'code'
 NOTEBOOK_DIR = 'notebooks'
 EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
-PLUGIN_PATH = '../pelican-plugins'
+#PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATH = '/Users/aimran/Code/misc/python/site/pelican-plugins'
 PLUGINS = ['liquid_tags.img','liquid_tags.notebook',
             'liquid_tags.video', 'liquid_tags.include_code']
 
