@@ -1,0 +1,14 @@
+{#  -*- coding: utf-8 -*- #}
+{% import 'base_helper.tmpl' as base with context %}
+
+{% macro html_footer() %}
+    {% if content_footer %}
+        <footer id="footer">
+              <div class="copyright">
+              {{ content_footer }}
+            </div>
+            </p>
+            {{ template_hooks['page_footer']() }}
+        </footer>
+    {% endif %}
+{% endmacro %}
