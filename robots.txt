@@ -1,0 +1,4 @@
+Sitemap: https://aimran.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: aimran.github.io
